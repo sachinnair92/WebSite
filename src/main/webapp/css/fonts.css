@@ -2,37 +2,37 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 300;
-    src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(//fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    src: local('Open Sans'), local('OpenSans'), url(//fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNShampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(//fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNShampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(//fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 800;
-    src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hhampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+    src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(//fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hhampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Open Sans';
     font-style: italic;
     font-weight: 400;
-    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(//fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Open Sans';
@@ -44,65 +44,65 @@
     font-family: 'Oswald';
     font-style: normal;
     font-weight: 300;
-    src: local('Oswald Light'), local('Oswald-Light'), url(http://fonts.gstatic.com/s/oswald/v10/HqHm7BVC_nzzTui2lzQTDZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    src: local('Oswald Light'), local('Oswald-Light'), url(//fonts.gstatic.com/s/oswald/v10/HqHm7BVC_nzzTui2lzQTDZBw1xU1rKptJj_0jans920.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Oswald';
     font-style: normal;
     font-weight: 400;
-    src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v10/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(//fonts.gstatic.com/s/oswald/v10/_P8jt3Y65hJ9c4AzRE0V1OvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Oswald';
     font-style: normal;
     font-weight: 700;
-    src: local('Oswald Bold'), local('Oswald-Bold'), url(http://fonts.gstatic.com/s/oswald/v10/bH7276GfdCjMjApa_dkG6ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    src: local('Oswald Bold'), local('Oswald-Bold'), url(//fonts.gstatic.com/s/oswald/v10/bH7276GfdCjMjApa_dkG6ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Lora';
     font-style: normal;
     font-weight: 400;
-    src: local('Lora'), local('Lora-Regular'), url(http://fonts.gstatic.com/s/lora/v9/rAXKWvABQNHjPUk26ixVvvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    src: local('Lora'), local('Lora-Regular'), url(//fonts.gstatic.com/s/lora/v9/rAXKWvABQNHjPUk26ixVvvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Lora';
     font-style: normal;
     font-weight: 700;
-    src: local('Lora Bold'), local('Lora-Bold'), url(http://fonts.gstatic.com/s/lora/v9/mlTYdpdDwCepOR2s5kS2CwLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+    src: local('Lora Bold'), local('Lora-Bold'), url(//fonts.gstatic.com/s/lora/v9/mlTYdpdDwCepOR2s5kS2CwLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Lora';
     font-style: italic;
     font-weight: 400;
-    src: local('Lora Italic'), local('Lora-Italic'), url(http://fonts.gstatic.com/s/lora/v9/_MYF_5lLoOGnzKiQsUc_vevvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+    src: local('Lora Italic'), local('Lora-Italic'), url(//fonts.gstatic.com/s/lora/v9/_MYF_5lLoOGnzKiQsUc_vevvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Lora';
     font-style: italic;
     font-weight: 700;
-    src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(http://fonts.gstatic.com/s/lora/v9/_IxjUs2lbQSu0MyFEAfa7ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+    src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(//fonts.gstatic.com/s/lora/v9/_IxjUs2lbQSu0MyFEAfa7ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Droid Serif';
     font-style: normal;
     font-weight: 400;
-    src: local('Droid Serif'), local('DroidSerif'), url(http://fonts.gstatic.com/s/droidserif/v6/0AKsP294HTD-nvJgucYTaIgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+    src: local('Droid Serif'), local('DroidSerif'), url(//fonts.gstatic.com/s/droidserif/v6/0AKsP294HTD-nvJgucYTaIgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Droid Serif';
     font-style: normal;
     font-weight: 700;
-    src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(http://fonts.gstatic.com/s/droidserif/v6/QQt14e8dY39u-eYBZmppwf79_ZuUxCigM2DespTnFaw.woff2) format('woff2');
+    src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(//fonts.gstatic.com/s/droidserif/v6/QQt14e8dY39u-eYBZmppwf79_ZuUxCigM2DespTnFaw.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Droid Serif';
     font-style: italic;
     font-weight: 400;
-    src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(http://fonts.gstatic.com/s/droidserif/v6/cj2hUnSRBhwmSPr9kS589weOulFbQKHxPa89BaxZzA0.woff2) format('woff2');
+    src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(//fonts.gstatic.com/s/droidserif/v6/cj2hUnSRBhwmSPr9kS589weOulFbQKHxPa89BaxZzA0.woff2) format('woff2');
 }
 @font-face {
     font-family: 'Droid Serif';
     font-style: italic;
     font-weight: 700;
-    src: local('Droid Serif Bold Italic'), local('DroidSerif-BoldItalic'), url(http://fonts.gstatic.com/s/droidserif/v6/c92rD_x0V1LslSFt3-QEpsyRwA4nzNmLFN68bwzDkMk.woff2) format('woff2');
+    src: local('Droid Serif Bold Italic'), local('DroidSerif-BoldItalic'), url(//fonts.gstatic.com/s/droidserif/v6/c92rD_x0V1LslSFt3-QEpsyRwA4nzNmLFN68bwzDkMk.woff2) format('woff2');
 }
