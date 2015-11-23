@@ -1,0 +1,304 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The NeuBlue bootstrap Website Template |Work :: w3layouts</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		 <!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		 <!-- start-smoth-scrolling-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		 <!-- start-smoth-scrolling-->
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700|Open+Sans:400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lora:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<!---//webfonts-->
+		<!--start-top-nav-script-->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!--//End-top-nav-script-->
+	</head>
+	<body>
+		<!-- start-header-->
+			<div class="header-top">
+					<div class="top-header">
+						<div class="container">
+						<div class="logo">
+							<h1><a href="index.html">Neu<lable>Blue</lable></a></h1>
+
+						</div>
+						<!--start-top-nav-->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li class="active"><a href="work.html">Work</a></li>
+								<li><a href="blog.html">blog</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<div class="clearfix"> </div>
+
+							</ul>
+							<a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+		</div>
+	<!-- Portfolio Starts Here -->
+	<div class="portfolios entertain_box  wow fadeInUp" data-wow-delay="0.4s" id="project">
+		<div class="container">
+			<div class="portfolio-top">
+			<h3> OUR PORTFOLIO</h3>
+			<ul id="filters" class="clearfix">
+						<li><span class="filter active" data-filter="app card icon logo web">All</span></li>
+						<li><span class="filter" data-filter="app">photos</span></li>
+						<li><span class="filter" data-filter="photo">Web designers</span></li>
+						<li><span class="filter" data-filter="card">Pictures</span></li>
+					</ul>
+					<div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="images/p11.png" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="images/p1.png" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/add.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+		                <div class ="small-text">
+		                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque eu erat lacus, consectetur</p> 
+		                </div>
+					</div>				
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="images/p21.png" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="images/p2.png" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/add.png" alt=""/></h2>
+						  	 </div></a>
+
+		                </div>
+		                <div class ="small-text">
+		                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque eu erat lacus, consectetur</p> 
+		                </div>
+					</div>		
+					<div class="portfolio photo mix_all" data-cat="photo" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="images/p31.png" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="images/p3.png" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/add.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+		                <div class ="small-text">
+		                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque eu erat lacus, consectetur</p> 
+		                </div>
+
+					</div>				
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="images/p41.png" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="images/p4.png" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/add.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+		                <div class ="small-text">
+		                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque eu erat lacus, consectetur</p> 
+		                </div>
+					</div>	
+					<div class="portfolio photo mix_all" data-cat="photo" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="images/p51.png" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+						     <img src="images/p5.png" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/add.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+		                <div class ="small-text">
+		                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque eu erat lacus, consectetur</p> 
+		                </div>
+					</div>			
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="images/p61.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
+						     <img src="images/p6.png" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="images/add.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+		                 <div class ="small-text">
+		                	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque eu erat lacus, consectetur</p> 
+		                </div>
+					</div>		
+		</div>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+	<!-- Portfolio Ends Here -->
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	var filterList = {
+	
+		init: function () {
+		
+			// MixItUp plugin
+		// http://mixitup.io
+		$('#portfoliolist').mixitup({
+			targetSelector: '.portfolio',
+			filterSelector: '.filter',
+			effects: ['fade'],
+			easing: 'snap',
+			// call the hover effect
+			onMixEnd: filterList.hoverEffect()
+		});				
+	
+	},
+	
+	hoverEffect: function () {
+	
+		// Simple parallax effect
+		$('#portfoliolist .portfolio').hover(
+			function () {
+				$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+				$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+			},
+			function () {
+				$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+				$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+			}		
+		);				
+	
+	}
+
+};
+
+// Run the show!
+	filterList.init();
+	
+});	
+</script>
+	
+			<!--footer-->
+			<div class="footer-top">
+							<div class="container">
+								<div class="footer-section">
+									<div class="col-md-3 footer-grid">
+								 		<h3>Wthat we offer</h3>
+								 		<div class="list styled arrow-list2">
+											<ul>
+												<li><a href="#"><img src="images/bb1.png" alt="">Web Design & Development</a></li>
+												<li><a href="#"><img src="images/bb1.png" alt="">CMS Wordpress&Development</a></li>
+												<li><a href="#"><img src="images/bb1.png" alt="">E-commerce</a></li>
+												<li><a href="#"><img src="images/bb1.png" alt="">PHP / My SQL</a></li>
+												<li><a href="#"><img src="images/bb1.png" alt="">Branding &CID </a></li>
+											</ul>
+										</div>
+						 			</div>
+									<div class="col-md-3 footer-grid bor">
+								 		<h3>Frends & Partners</h3>
+								 		<div class="list styled arrow-list3">
+											<ul>
+												<li><a href="#"><img src="images/bb1.png" alt="">Lorem-ipsum.com</a></li>
+												<li><a href="#"><img src="images/bb1.png" alt="">Dolor-sit.com</a></li>
+												<li><a href="#"><img src="images/bb1.png" alt="">Adobe.com</a></li>
+												<li><a href="#"><img src="images/bb1.png" alt="">Forrest.com</a></li>
+												<li><a href="#"><img src="images/bb1.png" alt=""> Dribble.com</a></li>
+											</ul>
+											</div>
+						 			</div>
+						 			<div class="col-md-3 footer-grid bor">
+								 		<h3>Meet us social networks</h3>
+								 		<div class="list styled arrow-list4">
+											<ul class="soc_icons2">
+											<li><a href="#"><i class="icon_4"></i><span>Facebook</a></span></li>
+											<li><a href="#"><i class="icon_5"></i><span>Twitter</a></span></li>
+											<li><a href="#"><i class="icon_6"></i><span>Behance</a></span></li>
+											<li><a href="#"><i class="icon_7"></i><span>Dribble</a> </span></li>
+											<li><a href="#"><i class="icon_8"></i><span>Forrest</a> </span></li>
+										</ul>
+									</div>
+
+											</div>
+						 			</div>
+						 			<div class="col-md-3 footer-grid">
+								 		<h3>Madrid</h3>
+								 		<div class="list styled arrow-list5">
+											<ul class="soc_icons3">
+											<li><a href="#"><i class="icon_41"></i><span>Flicker</a></span></li>
+											<li><a href="#"><i class="icon_51"></i><span>Linkedln</a></span></li>
+											<li><a href="#"><i class="icon_61"></i><span>Youtube</a></span></li>
+											<li><a href="#"><i class="icon_71"></i><span>Rss</a> </span></li>
+											<li><a href="#"><i class="icon_81"></i><span>Pinterest</a></span></li>
+										</ul>
+									</div>
+
+						 			</div>
+								<div class="clearfix"> </div>
+							</div>			
+					</div>
+				</div>
+				<!--/start-footer-->
+				<div class="footer">
+						<div class="container">
+							<div class="footer-content">
+									<p>&copy; 2014  All rights  Reserved | Template by &nbsp;<a href="http://w3layouts.com">W3Layouts</a></p>
+							</div>	
+						</div>	
+						<div class="clearfix"> </div>  							
+					</div>
+
+	<!-- //End-footer-->
+				<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+					<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</body>
+</html>		
