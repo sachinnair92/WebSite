@@ -20,9 +20,11 @@
   <link href='css/fonts.css' rel='stylesheet' type='text/css'>
   <link href='css/indexpage.css' rel='stylesheet' type='text/css'>
  <%-- <script src="https://apis.google.com/js/platform.js" async defer></script>--%>
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <%--<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>--%>
 
+  <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="897653746525-fkvthkdfn9cgifef5uedk68ntc7llg5j.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script type="text/javascript">
 
     $(document).ready(function(){
@@ -383,8 +385,8 @@
       </div>
       <div class="modal-body" align="center">
         <%--<div class="g-signin2" data-onsuccess="onSignIn"></div>--%>
-
-        <div id="google-signin"></div>
+          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+       <%-- <div id="google-signin"></div>--%>
           <hr>
 
           <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-size="xlarge" data-max-rows="5" > Log in with Facebook
@@ -409,17 +411,7 @@
 </div>
 
 <script>
-  function renderButton() {
-    gapi.signin2.render('google-signin', {
-      'scope': 'https://www.googleapis.com/auth/plus.login',
-      'width': 300,
-      'height': 50,
-      'longtitle': true,
-      'theme': 'dark',
-      'onsuccess': onSignIn,
-      'onfailure': onFailure
-    });
-  }
+
 
 
   function statusChangeCallback(response) {
