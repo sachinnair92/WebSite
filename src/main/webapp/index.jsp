@@ -20,10 +20,28 @@
   <link href='css/fonts.css' rel='stylesheet' type='text/css'>
   <link href='css/indexpage.css' rel='stylesheet' type='text/css'>
  <%-- <script src="https://apis.google.com/js/platform.js" async defer></script>--%>
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script src="http://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
   <meta name="google-signin-client_id" content="897653746525-fkvthkdfn9cgifef5uedk68ntc7llg5j.apps.googleusercontent.com">
   <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      var progress = setInterval(function() {
+        var $bar = $('.bar');
+
+        if ($bar.width()>=400) {
+          clearInterval(progress);
+          $('.progress').removeClass('active');
+        } else {
+          $bar.width($bar.width()+40);
+        }
+        $bar.text($bar.width()/4 + "%");
+      }, 800);
+
+    });
+
+
     jQuery(document).ready(function($) {
       $(".scroll").click(function(event){
         event.preventDefault();
@@ -384,12 +402,16 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
+<div class="container">
+  <div class="progress progress-striped active">
+    <div class="bar" style="width: 0%;"></div>
+  </div>
+</div>
 
 <script>
   function renderButton() {
     gapi.signin2.render('google-signin', {
-      'scope': 'https://www.googleapis.com/auth/plus.login',
+      'scope': 'http://www.googleapis.com/auth/plus.login',
       'width': 300,
       'height': 50,
       'longtitle': true,
@@ -444,6 +466,7 @@
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
 
 
 </script>
