@@ -411,7 +411,7 @@
 <script>
   function renderButton() {
     gapi.signin2.render('google-signin', {
-      'scope': 'http://www.googleapis.com/auth/plus.login',
+      'scope': 'https://www.googleapis.com/auth/plus.login',
       'width': 300,
       'height': 50,
       'longtitle': true,
