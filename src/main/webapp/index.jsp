@@ -20,7 +20,7 @@
   <link href='css/fonts.css' rel='stylesheet' type='text/css'>
   <link href='css/indexpage.css' rel='stylesheet' type='text/css'>
  <%-- <script src="https://apis.google.com/js/platform.js" async defer></script>--%>
-  <script src="http://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
   <meta name="google-signin-client_id" content="897653746525-fkvthkdfn9cgifef5uedk68ntc7llg5j.apps.googleusercontent.com">
   <script type="text/javascript">
