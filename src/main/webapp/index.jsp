@@ -413,6 +413,7 @@
 
         FB.api('/me', function(response) {
         var det = JSON.stringify(response);
+          alert(det);
           alert("Logged in - Name is "+response.name);
         });
     } else if (response.status === 'not_authorized') {
