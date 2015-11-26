@@ -35,7 +35,7 @@
     $(document).ready(function(){
 
       var loc=window.location.href;
-      if(loc.indexOf("https")==-1)
+      if(loc.indexOf("https")==-1 && loc.indexOf("localhost")==-1)
       {
         loc=loc.replace("http","https");
         window.location.href = loc;
@@ -137,9 +137,10 @@
 
     function fb_onSignIn(response) {
 
-      FB.api('/me', function(response) {
+      FB.api('/me?fields=name,email', function(response) {
         var det = JSON.stringify(response);
         alert(det);
+        alert(response.email);
         alert("Logged in - Name is "+response.name);
       });
     }
@@ -168,7 +169,7 @@
         } else {
           alert('Authorization failed');
         }
-      }, { scope: 'email,public_profile' });
+      }, {scope: 'public_profile,email'});
     }
 
 
