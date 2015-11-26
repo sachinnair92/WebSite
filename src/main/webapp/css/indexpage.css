@@ -2,3 +2,65 @@
     top: 30%;
     height: 500px;
 }
+
+#googleBtn {
+    display: inline-block;
+    background: #dc493c;
+    color: white;
+    width: 300px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+#googleBtn:hover {
+    cursor: pointer;
+}
+
+span.google_icon {
+    background: url('/images/gplus.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    border-right: white 1px solid;
+}
+span.google_buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+}
+
+#fbBtn {
+    display: inline-block;
+    background: #4a6ea9;
+    color: white;
+    width: 300px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+#fbBtn:hover {
+    cursor: pointer;
+}
+
+span.fb_icon {
+    background: url('/images/fb.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    border-right: #3c5897 1px solid;
+}
+span.fb_buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+}

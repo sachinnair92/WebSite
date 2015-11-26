@@ -22,9 +22,14 @@
  <%-- <script src="https://apis.google.com/js/platform.js" async defer></script>--%>
   <%--<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>--%>
 
+<%--
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="897653746525-fkvthkdfn9cgifef5uedk68ntc7llg5j.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+--%>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <script src="https://apis.google.com/js/api:client.js"></script>
+<%--  <script src="https://apis.google.com/js/platform.js" async defer></script>--%>
   <script type="text/javascript">
 
     $(document).ready(function(){
@@ -68,24 +73,98 @@
     });
 
 
-    function onSignIn(googleUser) {
+
+
+    function facebook_checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        facebook_statusChangeCallback(response);
+      });
+    }
+  </script>
+  <script>
+
+    //google login
+
+    var googleUser = {};
+    var show_googlebutton = function() {
+      gapi.load('auth2', function(){
+        // Retrieve the singleton for the GoogleAuth library and set up the client.
+        auth2 = gapi.auth2.init({
+          client_id: '897653746525-fkvthkdfn9cgifef5uedk68ntc7llg5j.apps.googleusercontent.com',
+          cookiepolicy: 'single_host_origin',
+          // Request scopes in addition to 'profile' and 'email'
+          //scope: 'additional_scope'
+        });
+        attachSignin(document.getElementById('googleBtn'));
+      });
+    };
+
+    function attachSignin(element) {
+      console.log(element.id);
+      auth2.attachClickHandler(element, {},
+              function(googleUser) {
+                document.getElementById('google_buttonText').innerHTML= "Signed in: " + google_onSignIn(googleUser);
+              }, function(error) {
+                alert(JSON.stringify(error, undefined, 2));
+              });
+    }
+
+    function google_onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
       alert('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
       alert('Name: ' + profile.getName());
       alert('Image URL: ' + profile.getImageUrl());
       alert('Email: ' + profile.getEmail());
+      return(profile.getName());
     }
 
-    function onFailure(error) {
+    function google_onFailure(error) {
       console.log(error);
     }
+  </script>
 
+  <script>
 
-    function checkLoginState() {
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
+    //facebook login
+
+    function fb_onSignIn(response) {
+
+      FB.api('/me', function(response) {
+        var det = JSON.stringify(response);
+        alert(det);
+        alert("Logged in - Name is "+response.name);
       });
     }
+
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '194392467564233',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    function fb_login() {
+      FB.login(function(response) {
+        if (response.authResponse) {
+          fb_onSignIn();
+        } else {
+          alert('Authorization failed');
+        }
+      }, { scope: 'email,public_profile' });
+    }
+
+
+
   </script>
 
 </head>
@@ -385,15 +464,35 @@
       </div>
       <div class="modal-body" align="center">
         <%--<div class="g-signin2" data-onsuccess="onSignIn"></div>--%>
-          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <%--<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>--%>
        <%-- <div id="google-signin"></div>--%>
+
+          <div id="gSignInWrapper">
+            <div id="googleBtn" class="customGPlusSignIn">
+              <span class="google_icon"></span>
+              <span id="google_buttonText" class="google_buttonText">LOG IN WITH GOOGLE</span>
+            </div>
+          </div>
+
+
+
           <hr>
 
-          <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-size="xlarge" data-max-rows="5" > Log in with Facebook
+<%--
+          <fb:login-button scope="public_profile,email" fb_login() data-size="xlarge" data-max-rows="5" > Log in with Facebook
           </fb:login-button>
+--%>
+          <div id="fbSignInWrapper">
+            <div id="fbBtn" class="customfbSignIn">
+              <span class="fb_icon"></span>
+              <span id="fb_buttonText" class="fb_buttonText" onclick="fb_login();">LOG IN WITH FACEBOOK</span>
+            </div>
+          </div>
+
+
           <hr>
           <br/>
-          <label style="font-size: 15px">By logging in, you agree to Grocberry's Terms of Service, Cookie Policy, Privacy Policy and Content Policies.</label>
+          <label style="font-size: 15px;font-family: 'Roboto', sans-serif;font-size: 14px;font-weight: bold;">By logging in, you agree to Grocberry's Terms of Service, Privacy Policy and Content Policies.</label>
 
           <div id="status">
           </div>
@@ -411,56 +510,7 @@
 </div>
 
 <script>
-
-
-
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-
-
-        FB.api('/me', function(response) {
-        var det = JSON.stringify(response);
-          alert(det);
-          alert("Logged in - Name is "+response.name);
-        });
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-              'into this app.';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-              'into Facebook.';
-    }
-  }
-
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '194392467564233',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-
-
+  show_googlebutton();
 </script>
 
 </body>
