@@ -34,6 +34,14 @@
 
     $(document).ready(function(){
 
+      var loc=window.location.href;
+      if(loc.indexOf("https")==-1)
+      {
+        loc=loc.replace("http","https");
+        window.location.href = loc;
+      }
+
+
       var progress = setInterval(function() {
         var $bar = $('.bar');
 
