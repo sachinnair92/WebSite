@@ -117,16 +117,18 @@
               });
     }
 
+
+
     function google_onSignIn(googleUser) {
 
       alert("signed in");
 
-      var url="https://grocberry-webserver.herokuapp.com/api/user/checkuser?user_id=12345&name=sachin&email=sachinnair92@gmail.com&platform=google";
+      var url="https://www.grocberry-webserver.herokuapp.com/api/user/checkuser?user_id=12345&name=sachin&email=sachinnair92@gmail.com&platform=google";
       $.ajax({
         type: "GET",
         url: url,
         async:true,
-        dataType : 'json',   //you may use jsonp for cross origin request
+        dataType : 'jsonp',   //you may use jsonp for cross origin request
         crossDomain:true,
         success: function(data, status, xhr) {
           alert("success");
