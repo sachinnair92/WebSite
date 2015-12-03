@@ -123,7 +123,7 @@
 
       alert("signed in");
 
-      var url="https://www.grocberry-webserver.herokuapp.com/api/user/checkuser?user_id=12345&name=sachin&email=sachinnair92@gmail.com&platform=google";
+      var url="https://grocberry-webserver.herokuapp.com/api/user/checkuser?user_id=12345&name=sachin&email=sachinnair92@gmail.com&platform=google";
       $.ajax({
         type: "GET",
         url: url,
