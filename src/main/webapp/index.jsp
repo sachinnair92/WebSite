@@ -128,7 +128,7 @@
         type: "GET",
         url: url,
         async:true,
-        dataType : 'jsonp',   //you may use jsonp for cross origin request
+        dataType : 'json',   //you may use jsonp for cross origin request
         crossDomain:true,
         success: function(data, status, xhr) {
           alert("success");
