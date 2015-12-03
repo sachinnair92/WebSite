@@ -118,12 +118,43 @@
     }
 
     function google_onSignIn(googleUser) {
-      var profile = googleUser.getBasicProfile();
+
+      alert("signed in");
+
+      var url="https://grocberry-webserver.herokuapp.com/api/user/checkuser?user_id=12345&name=sachin&email=sachinnair92@gmail.com&platform=google";
+      $.ajax({
+        type: "GET",
+        url: url,
+        async:true,
+        dataType : 'json',   //you may use jsonp for cross origin request
+        crossDomain:true,
+        success: function(data, status, xhr) {
+          alert("success");
+        }
+      }).fail(function() {
+        alert( "error" );
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /* var profile = googleUser.getBasicProfile();
       alert('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
       alert('Name: ' + profile.getName());
       alert('Image URL: ' + profile.getImageUrl());
       alert('Email: ' + profile.getEmail());
-      return(profile.getName());
+      return(profile.getName());*/
     }
 
     function google_onFailure(error) {
