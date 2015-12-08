@@ -91,6 +91,36 @@
   </script>
   <script>
 
+    function checkuser(user_id,name,email,platform){
+
+      //alert(user_id+" "+name+" "+email+" "+platform);
+      if(name.indexOf(" ") > -1)
+      {
+        name=name.replace(" ","%20");
+      }
+      var url="https://grocberry-webserver.herokuapp.com/api/user/checkuser?user_id="+user_id+"&name="+name+"&email="+email+"&platform="+platform;
+
+      //var url="https://grocberry-webserver.herokuapp.com/api/user/checkuser?user_id=12345&name=sachin&email=sachinnair92@gmail.com&platform=google";
+      $.ajax({
+        type: "GET",
+        url: url,
+        async:true,
+        crossDomain:true,
+        success: function(data, status, xhr) {
+          alert("success "+JSON.stringify(data));
+
+        }
+      }).fail(function() {
+        alert( "error" );
+      });
+    }
+  </script>
+
+
+
+
+  <script>
+
     //google login
 
     var googleUser = {};
@@ -111,7 +141,7 @@
       console.log(element.id);
       auth2.attachClickHandler(element, {},
               function(googleUser) {
-                document.getElementById('google_buttonText').innerHTML= "Signed in: " + google_onSignIn(googleUser);
+                document.getElementById('google_buttonText').innerText= "Signed in: " + google_onSignIn(googleUser);
               }, function(error) {
                 alert(JSON.stringify(error, undefined, 2));
               });
@@ -120,43 +150,12 @@
 
 
     function google_onSignIn(googleUser) {
-
-      alert("signed in");
-
-      var url="https://grocberry-webserver.herokuapp.com/api/user/checkuser?user_id=12345&name=sachin&email=sachinnair92@gmail.com&platform=google";
-      $.ajax({
-        type: "GET",
-        url: url,
-        async:true,
-        dataType : 'json',   //you may use jsonp for cross origin request
-        crossDomain:true,
-        success: function(data, status, xhr) {
-          alert("success");
-        }
-      }).fail(function() {
-        alert( "error" );
-      });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     /* var profile = googleUser.getBasicProfile();
-      alert('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-      alert('Name: ' + profile.getName());
-      alert('Image URL: ' + profile.getImageUrl());
-      alert('Email: ' + profile.getEmail());
-      return(profile.getName());*/
+      var profile = googleUser.getBasicProfile();
+      var user_id=profile.getId();
+      var name=profile.getName();
+      var email=profile.getEmail();
+      var platform="Google";
+      checkuser(user_id,name,email,platform);
     }
 
     function google_onFailure(error) {
@@ -171,10 +170,11 @@
     function fb_onSignIn(response) {
 
       FB.api('/me?fields=name,email', function(response) {
-        var det = JSON.stringify(response);
-        alert(det);
-        alert(response.email);
-        alert("Logged in - Name is "+response.name);
+        var user_id=response.id;
+        var name=response.name;
+        var email=response.email;
+        var platform="Facebook";
+        checkuser(user_id,name,email,platform);
       });
     }
 
